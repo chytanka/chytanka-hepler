@@ -1,0 +1,38 @@
+.chtnk-button {
+    all: unset;
+}
+
+.chtnk-button {
+	letter-spacing: -0.08ch;
+	text-decoration: none;
+	font-weight: bold;
+	margin-inline: 1ch;
+	padding: 0.32ch 0.64ch;
+	background-color: hsl(203, 74%, 34%);
+	color: #ffd60a !important;
+	
+	vertical-align: middle;
+	-webkit-tap-highlight-color: unset;
+	font-family: "Courier New", Courier, monospace;
+	cursor: pointer;
+	font-size: small;
+	z-index: 2147483647;
+	position: relative;
+
+	display: inline-grid;
+	place-content: center;
+	background-color: #002741;
+	border: 1px solid #166496 !important;;
+	aspect-ratio: 1;
+    text-align: center;
+	height: 3ch;
+	border-radius: 0.5ch;
+	text-transform: uppercase;
+	line-height: 1.3ch !important;
+	box-shadow: 0 0.24ch #166496;
+	color: #ffd60a;
+
+	&:hover {
+		background-color: #166496;
+	}
+}
