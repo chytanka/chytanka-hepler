@@ -14,7 +14,13 @@ function createChytankaObserver({ selector, regex, urlPrefix, className = "chtnk
 
             const btn = document.createElement("a");
             btn.href = `https://chytanka.ink/${urlPrefix}/${uuid}`;
-            btn.setHTMLUnsafe(`<span>📖</span> ${label}`);
+            
+            if (btn.setHTMLUnsafe) {
+                btn.setHTMLUnsafe(`<span>📖</span> ${label}`);
+            } else {
+                btn.innerHTML = `<span>📖</span> ${label}`;
+            }
+            
             btn.title = label;
             btn.target = "_blank";
             btn.className = `chtnk-btn ${className}`;
