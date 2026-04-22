@@ -1,0 +1,75 @@
+:root {
+    --chtnk-primary: #ffd60a;
+    --chtnk-secondary: #166496;
+
+    --chtnk-border-radius: 0.5ch;
+    --chtnk-padding-y: 0.5ch;
+    --chtnk-padding-x: 1ch;
+    --chtnk-margin-block: 1ch;
+    --chtnk-shadow-distance: 0.5ch;
+    --chtnk-t: 0.133333334s;
+    --chtnk-lightness: 0.48;
+    --chtnk-shadow-lightness: 0.36;
+    --chtnk-chroma: 0.0192;
+    --chtnk-base-color: oklch(from var(--chtnk-secondary) var(--chtnk-lightness) var(--chtnk-chroma) h);
+    --chtnk-shadow-color: oklch(from var(--chtnk-base-color) var(--chtnk-shadow-lightness) c h);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --chtnk-lightness: 0.72;
+        --chtnk-shadow-lightness: 0.6;
+    }
+}
+
+.chtnk-btn {
+    position: relative;
+    z-index: 16;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    margin-block: var(--chtnk-margin-block);
+    padding: var(--chtnk-padding-y) var(--chtnk-padding-x);
+    background-color: var(--chtnk-primary);
+    color: var(--chtnk-secondary);
+    border-radius: var(--chtnk-border-radius);
+    font-size: small;
+    font-weight: bold;
+    text-decoration: none;
+    justify-self: baseline;
+    line-height: 1.5;
+    transition: all var(--chtnk-t) ease-in-out;
+
+    box-shadow:
+        1px 1px var(--chtnk-secondary),
+        var(--chtnk-shadow-distance) var(--chtnk-shadow-distance) var(--chtnk-shadow-color);
+}
+
+.chtnk-btn.abs {
+    position: absolute;
+    top: .5ch;
+    left: 1.5ch;
+}
+
+.chtnk-btn span {
+    font-size: 1.3em;
+}
+
+.chtnk-btn:hover {
+    --chtnk-shadow-distance: 1ch;
+    translate: 0 -0.5ch;
+    background: color-mix(in lab, var(--chtnk-primary) 80%, white 20%);
+}
+
+.chtnk-btn:active {
+    --chtnk-shadow-distance: 0ch;
+    translate: 0 0;
+    background: color-mix(in lab, var(--chtnk-primary) 80%, black 20%);
+}
+
+a.chtnk-btn[target="_blank"]::after {
+    content: " \2197";
+    font-size: 0.8em;
+    opacity: 0.8;
+    vertical-align: super;
+}

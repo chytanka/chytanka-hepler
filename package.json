@@ -1,0 +1,24 @@
+{
+  "name": "chytanka-helper",
+  "version": "1.2.0",
+  "description": "This browser extension adds a convenient **\"View in Chytanka\"** button next to supported links on various websites.",
+  "main": "index.js",
+  "scripts": {
+    "zip": "node scripts/zip-extension.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chytanka/chytanka-hepler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/chytanka/chytanka-hepler/issues"
+  },
+  "homepage": "https://github.com/chytanka/chytanka-hepler#readme",
+  "devDependencies": {
+    "archiver": "^7.0.1"
+  }
+}
